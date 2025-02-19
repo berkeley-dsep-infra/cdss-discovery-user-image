@@ -152,11 +152,6 @@ RUN /srv/conda/bin/code-server --extensions-dir ${VSCODE_EXTENSIONS} --install-e
 # Install Code Server Python extension
 RUN /srv/conda/bin/code-server --extensions-dir ${VSCODE_EXTENSIONS} --install-extension ms-python.python
 
-# TODO:  there's a good chance we may not need this, jon f 2025-01-24
-ENV NLTK_DATA=${CONDA_DIR}/nltk_data
-COPY connectors/text.bash /tmp/connector-text.bash
-RUN /tmp/connector-text.bash
-
 # install chromium browser for playwright
 # https://github.com/berkeley-dsep-infra/datahub/issues/5062
 # playwright is only availalbe in nbconvert[webpdf], via pip/pypi.
