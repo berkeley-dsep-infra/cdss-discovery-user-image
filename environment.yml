@@ -1,66 +1,86 @@
-name: datahub
-# This is the standard conda configuration file. Use this file to list
-# the conda packages that you need installed in your environment.
+name: base
+
 channels:
   - conda-forge
+  - bioconda
+  - nvidia
   
 dependencies:
-  # Items required for basic level functionality
-  - gh-scoped-creds==4.1
   - git==2.47.1
   - jupyter-archive==3.4.0
   - jupyter-offlinenotebook==0.3.1
   - jupyter-resource-usage==1.1.0  
   - jupyter-server-proxy==4.4.0
   - jupyter_server==2.15.0 
+<<<<<<< Updated upstream
   - jupyterhub==5.2.1
   - jupyterlab==4.3.4
   - jupyterlab-git==0.50.2
+=======
+>>>>>>> Stashed changes
   - jupyterlab_rise==0.43.1
-  - jupytext==1.16.6
   - nbgitpuller==1.2.1
   - notebook==7.3.2
+<<<<<<< Updated upstream
   - otter-grader==6.1.0
   - pip==24.3.1  
   - python==3.11.*
+=======
+>>>>>>> Stashed changes
 
-  # other packages
-  - appmode==1.0.0
-  - ipykernel = 6.29.5
-  - ipywidgets==8.1.5
   - jupyterlab-geojson==3.4.0
   - jupyter-rsession-proxy==2.2.1
   - jupyter-syncthing-proxy==1.0.3
-  - nbclassic==1.0.0
-  - requests==2.32.3
   - syncthing==1.29.2
-  - traitlets=5.14.3
 
   # vscode
   - jupyter-vscode-proxy==0.6
   - code-server==4.96.2
 
   # jupyterbook
-  - mystmd==1.3.19
+  - mystmd
 
   # Base scientific packages that other conda packages we install depend on
   # We don't want to have conda packages depend on pip packages if possible
-  - decorator=5.1.1
-  - ipympl=0.9.*
-  - matplotlib=3.10.*
-  - networkx=3.4.2
   - nltk=3.9.1
-  - numpy=2.2.*
-  - pandas==2.2.3
-  - scikit-learn=1.6.0
-  - scipy=1.14.1
-  - seaborn=0.13.2
   - spacy==3.8.2
-  - statsmodels=0.14.4
+
+  - tensorflow
 
   - pip:
+    - --extra-index-url="https://pypi.nvidia.com"
     - git-credential-helpers==0.2
+    - gh-scoped-creds==4.1
     - jupyter-shiny-proxy==1.3.0
-    - nbconvert[webpdf]==7.16.5
+    # NVIDIA cuQuantum SDK
+    - cuquantum-cu12
+    - cuquantum-python-cu12
+    - cudaq
+    - qiskit-aer-gpu
+    - qsimcirq
+    - 'pennylane-lightning[gpu]'
+    # JAX and Flax with CUDA
+    - 'jax[cuda12]'
+    - flax
+    # Common packages
+    - lightning
+    #- pytorch-ignite
+    #- torch_geometric
+    - fastai
+    - wandb
+    - accelerate
+    - transformers
+    #- huggingface_hub[torch,cli]
+    - mlflow
+    - optuna
+    - optuna-dashboard
+    - ray[tune]
+    - jupyter-ai[all]
+    - git+https://gitlab.nrp-nautilus.io/prp/jupyter-ai-nrp.git
+    - astropy
+    - imutils
+    - scikit-commpy
+    - visualdl
+
 
     # ATTEMPT TO PUT NEW PACKAGES IN THE CONDA LIST ABOVE FIRST, RATHER THAN PIP

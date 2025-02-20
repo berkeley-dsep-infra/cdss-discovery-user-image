@@ -1,27 +1,14 @@
 # general desired cli tools
-curl
-emacs
-less
 rsync
-vim
 wget
 screen
-man
-man-db
-manpages-posix
-manpages-dev
-manpages-posix-dev
 tar
-zip
+
+# for apt key management
+gnupg
 
 # other editors, pagers, tools
-micro
 tini
-locales
-nano
-
-# for ops debugging
-net-tools
 
 # for timing builds
 time
@@ -31,36 +18,8 @@ zip
 
 # for nbconvert
 pandoc
-texlive-xetex
-texlive-fonts-recommended
 # provides FandolSong-Regular.otf for issue #2714
 texlive-lang-chinese
-texlive-plain-generic
-
-# for LS88-5 and modules basemap
-libspatialindex-dev
-
-# For L&S22
-graphviz
-
-# for phys 151
-gfortran
-
-# for issue #2695, fall 2021?
-libarmadillo-dev
-
-# for notebook-as-pdf
-libx11-xcb1
-libxtst6
-libxrandr2
-libasound2
-libpangocairo-1.0-0
-libatk1.0-0
-libatk-bridge2.0-0
-libgtk-3-0
-libnss3
-libxss1
-fonts-noto-color-emoji
 
 # for rstudio
 psmisc
@@ -84,20 +43,12 @@ libudunits2-dev
 # Used by littler for IRkernel::installspec
 libzmq5
 
-# MUSIC 30: musescore3
-# https://github.com/berkeley-dsep-infra/datahub/issues/5047
-musescore3
-
 # additional R packages 
 # https://github.com/berkeley-dsep-infra/datahub/issues/5061
 libgdal-dev
 libgeos-dev
 libproj-dev
 libmysqlclient-dev
-
-# 2024-08 workshop
-# https://github.com/berkeley-dsep-infra/datahub/issues/5906
-man
 
 # R package magick
 # Unknown requirement. Perhaps remove this and the R magick package during a
