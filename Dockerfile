@@ -2,7 +2,7 @@
 # Based on scipy-notebook, with torch from pip
 
 # This is quay.io/jupyter/pytorch-notebook:cuda12-latest on 2025-02-19
-ARG BASE_CONTAINER=docker pull quay.io/jupyter/pytorch-notebook@sha256:bd1f33cd587431aca9c8f351628da02c3ba888acb715a369cdd49943033ea505
+ARG BASE_CONTAINER=quay.io/jupyter/pytorch-notebook@sha256:bd1f33cd587431aca9c8f351628da02c3ba888acb715a369cdd49943033ea505
 
 FROM $BASE_CONTAINER as base
 
